@@ -6,29 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
     <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/8e9f2dfa0b.js" crossorigin="anonymous" defer></script>
     <title>Jordon Hong</title>
 </head>
 <body>
-    <header>
-        <h1 id="logo">Jordon Hong</h1>
-        <nav>
-            <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Random</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <img src="/assets/profile.png" alt="A photo of Jordon Hong" id="profile">
-            <h2>🌊 Hello World. 👋</h2>
-            <p>I'm Jordon. I'm a first year student @ the University of Manitoba's Faculty of Science, passionate programmer, former IB survivor, and terrible at writing personal bios! 😜</p>
-            <p>Some fields of interests to me as a programmer are front-end web dev, Natural Language Processing (NLP) and computational linguistics. Currently using codecademy to teach myself more front-end skills and a proper introduction to python3!</p>
-        </section>
-    </main>
-    <footer>
-        <p id="copyright">&copy; Jordon Hong 2022</p>
-    </footer>
+    <div class="container">
+        <header>
+            <h1 id="logo">Jordon Hong</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Random</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="profile">
+                <img class="profile-picture" src="/assets/profile.png" alt="A photo of Jordon Hong" id="profile">
+                <h2>🌊 Hello World. 👋</h2>
+                <p>I'm Jordon. I'm a first year student @ the University of Manitoba's Faculty of Science, passionate programmer, former IB survivor, and terrible at writing personal bios! 😜</p>
+                <p>Some fields of interests to me as a programmer are front-end web dev, Natural Language Processing (NLP) and computational linguistics. Currently using codecademy to teach myself more front-end skills and a proper introduction to python3!</p>
+            </section>
+            <section class="projects">
+                <h2>Projects</h2>
+                <div class="project">
+                    <a href="#">Rollbot</a>
+                </div>
+                <div class="project">
+                    <a href="#">Doro's Kitchen</a>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p id="copyright">&copy; Jordon Hong 2022</p>
+            <nav>
+                <ul>
+                    <li><i class="fa-brands fa-github"></i></li>
+                    <li><i class="fa-brands fa-linkedin"></i></li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
 </body>
 </html>
