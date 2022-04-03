@@ -32,7 +32,7 @@
 
 :root {
   --accent-primary: #efe48d;
-  --background-primary: #041f22;
+  --background-primary: gray;
   --background-secondary: #05595B;
   --color-primary: #F5F5F5;
   --color-secondary: #F3E9DD;
@@ -46,7 +46,9 @@ body {
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 72px;
+  line-height: 1;
+  border: 1px solid blueviolet;
 }
 
 h1,
@@ -73,24 +75,17 @@ header {
   border: 1px solid red;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: end;
   align-items: center;
   width: 100%;
-  height: 100px;
+  height: 12vh;
+  min-height: 80px;
   padding: 0 50px;
-  background-color: none;
-  position: fixed;
-}
-
-header #logo {
-  padding-bottom: 0;
-  margin: 0 3rem;
-  padding-top: 0.3rem;
 }
 
 nav a {
   margin-right: 3rem;
-  font-size: 18px;
+  font-size: 20px;
   transition: 150ms ease-in;
   border-bottom: none;
 }
@@ -101,13 +96,31 @@ nav a:active {
 }
 
 main {
-  position: relative;
-  top: 120px;
+  margin: 0 6rem;
 }
 
-.profile-picture {
-  height: 500px;
-  max-width: 500px;
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#hero {
+  height: 90vh;
+  border: 1px solid green;
+}
+
+#hero .section-content {
+  border: 1px solid blue;
+  padding: none;
+  height: auto;
+}
+
+#hero .section-content > p {
+  font-family: "Arvo", Georgia, 'Times New Roman', Times, serif;
+  font-size: 28px;
 }
 
 .project > img {
