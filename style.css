@@ -55,7 +55,10 @@ h1 {
 }
 
 h2 {
+  padding-left: 0.5rem;
   font-size: 36px;
+  border: 3px solid var(--background-secondary);
+  box-shadow: -10px 10px var(--background-secondary);
 }
 
 p {
@@ -112,6 +115,7 @@ main {
 }
 
 section {
+  border: 1px solid red;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -120,7 +124,8 @@ section {
 }
 
 .section-content {
-  width: 50%;
+  border: 1px solid purple;
+  width: 75%;
 }
 
 #hero {
@@ -137,6 +142,25 @@ section {
 #hero .section-content > p {
   font-family: "Arvo", Georgia, 'Times New Roman', Times, serif;
   font-size: 28px;
+}
+
+#profile .section-content {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 75%;
+}
+
+#profile .profile-biography {
+  width: 65%;
+}
+
+#profile .profile-picture {
+  width: 30%;
+  height: auto;
+  min-width: 200px;
+  min-height: 315px;
+  box-shadow: -10px 10px var(--background-secondary);
 }
 
 .project > img {
