@@ -1,14 +1,11 @@
 /* Imported font faces */
 @font-face {
-  font-family: "Arvo";
-  font-style: normal, italic;
-  font-weight: 400, 700;
+  font-family: 'Noto Serif';
+  font-style: normal;
+  font-weight: 700;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/arvo/v14/tDbD2oWUg0MKqScQ7Z7o_vo.woff2)
-    format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD;
+  src: url(https://fonts.gstatic.com/s/notoserif/v20/ga6Law1J5X9T9RW6j9bNdOwzfReece9LOoc.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 @font-face {
@@ -45,11 +42,6 @@ body {
   font-family: "Lato", Arial, Helvetica, sans-serif;
 }
 
-h1,
-h2 {
-  font-family: "Arvo", Georgia, "Times New Roman", Times, serif;
-}
-
 h1 {
   font-size: 80px;
 }
@@ -61,14 +53,18 @@ h2 {
   box-shadow: -10px 10px var(--background-secondary);
 }
 
+h3 {
+  font-size: 28px;
+}
+
 p {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 a {
   color: var(--color-primary);
   text-decoration: none;
-  transition: color 200ms ease-in-out;
+  transition: color 200ms ease-out;
 }
 
 a:visited {
@@ -116,57 +112,69 @@ main {
 
 section {
   border: 1px solid red;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr;
   height: 100vh;
-}
-
-.section-content {
-  border: 1px solid purple;
   width: 75%;
+  margin: 0 auto;
 }
 
 #hero {
   height: 90vh;
-  border: 1px solid green;
 }
 
 #hero .section-content {
+  grid-row: 2/ span 1;
   border: 1px solid blue;
-  padding: none;
-  height: auto;
 }
 
 #hero .section-content > p {
-  font-family: "Arvo", Georgia, 'Times New Roman', Times, serif;
-  font-size: 28px;
+  font-size: 36px;
 }
 
-#profile .section-content {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  width: 75%;
-}
-
-#profile .profile-biography {
-  width: 65%;
+#profile {
+  grid-template-columns: repeat(5, 1fr);
 }
 
 #profile .profile-picture {
-  width: 30%;
-  height: auto;
-  min-width: 200px;
-  min-height: 315px;
+  width: fit-content;
+  max-width: 350px;
+  grid-area: 2 / 1 / span 2 / span 3;
   box-shadow: -10px 10px var(--background-secondary);
+}
+
+#profile .profile-biography {
+  grid-area: 2 / 3 / span 1 / span 3;
+}
+
+#projects .section-content {
+  grid-row: 2 / span 1;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-areas: "a a";
+  grid-auto-columns: 50%;
+  grid-auto-rows: 300px;
+}
+
+.project {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  border: 1px solid green;
+}
+
+.project .project-info {
+  margin-left: 3rem;
 }
 
 .project > img {
   width: 200px;
-  height: 200px;
+  height: fit-content;
+  margin-top: 3rem;
   border-radius: 50%;
+  
 }
 
 .project .project-link::after {
