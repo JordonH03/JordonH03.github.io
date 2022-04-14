@@ -28,9 +28,9 @@
 }
 
 :root {
-  --accent-primary: #E8C052;
+  /* --accent-primary: #E8C052; */
+  --accent-primary: #2a5294;
   --background-primary: #F6F4F3;
-  --background-secondary: #1B3A6D;
   --color-primary: #313844;
   --color-secondary: #646464;
 }
@@ -49,8 +49,8 @@ h1 {
 h2 {
   padding-left: 0.5rem;
   font-size: 36px;
-  border: 3px solid var(--background-secondary);
-  box-shadow: -10px 10px var(--background-secondary);
+  border: 3px solid var(--accent-primary);
+  box-shadow: -10px 10px var(--accent-primary);
 }
 
 h3 {
@@ -104,6 +104,10 @@ nav a {
 nav a:hover,
 nav a:active {
   border-bottom: 2px solid var(--accent-primary);
+}
+
+nav i {
+  font-size: 24px;
 }
 
 main {
@@ -185,4 +189,19 @@ section {
 .project .project-link:hover::after,
 .project .project-link:active::after {
   padding-left: 0.5rem;
+}
+
+#theme-switch {
+  width: 40px;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 300ms ease-out;
+  background-color: transparent;
+}
+
+#theme-switch:hover {
+  cursor: cursor;
+  background-color: var(--accent-primary);
 }
