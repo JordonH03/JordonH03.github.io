@@ -57,7 +57,6 @@ h1 {
 }
 
 h2 {
-  padding-left: 0.5rem;
   font-size: 36px;
   border-width: 3px;
   /* border-style: solid; */
@@ -171,7 +170,7 @@ section {
   /* border: 1px solid red; */
   display: grid;
   height: 100vh;
-  min-height: 240px;
+  min-height: 360px;
   margin: 0 auto;
 }
 
@@ -182,7 +181,7 @@ section#hero {
 }
 
 #hero .section-content {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   grid-area: 2 / 2 / span 1 / span 1;
 }
 
@@ -190,19 +189,22 @@ section#hero {
   font-size: 36px;
 }
 
-#profile {
-  grid-template-columns: repeat(5, 1fr);
+section#profile {
+  /* border: 1px solid red; */
+  grid-template: 1fr 4fr 1fr / 1fr 2fr 1fr 4fr 1fr;
 }
 
 #profile-picture {
-  width: fit-content;
-  max-width: 350px;
-  grid-area: 2 / 1 / span 2 / span 3;
-  box-shadow: -10px 10px var(--background-secondary);
+  /* border: 1px solid blue; */
+  /* width: auto; */
+  max-height: 350px;
+  grid-area: 2 / 2 / span 1 / span 1;
+  /* box-shadow: -10px 10px; */
 }
 
-#profile .profile-biography {
-  grid-area: 2 / 3 / span 1 / span 3;
+#profile .section-content {
+  border: 1px solid green;
+  grid-area: 2 / 4 / span 1 / span 1;
 }
 
 #projects .section-content {
