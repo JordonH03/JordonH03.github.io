@@ -60,7 +60,7 @@ h2 {
   padding-left: 0.5rem;
   font-size: 36px;
   border-width: 3px;
-  border-style: solid;
+  /* border-style: solid; */
 }
 
 h2.light {
@@ -115,7 +115,7 @@ a.dark:active {
 
 header,
 footer {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -127,7 +127,7 @@ footer {
 header #logo {
   font-size: 32px;
   border-bottom-width: 3px;
-  border-style: solid;
+  border-bottom-style: solid;
 }
 
 header #logo.light {
@@ -136,6 +136,20 @@ header #logo.light {
 
 header #logo.dark {
   border-color: var(--accent-dark);
+}
+
+#theme-toggle {
+  text-align: center;
+  font-size: 30px;
+  cursor: pointer;
+  transition: 300ms ease-out;
+  background-color: transparent;
+  border: none;
+}
+
+#theme-toggle:hover {
+  cursor: cursor;
+  background-color: var(--accent-primary);
 }
 
 nav a {
@@ -157,17 +171,19 @@ section {
   /* border: 1px solid red; */
   display: grid;
   height: 100vh;
+  min-height: 240px;
   margin: 0 auto;
 }
 
 section#hero {
+  /* border: 1px solid red; */
   height: 90vh;
-  min-height: 500px;
+  grid-template: 1fr 2fr 1fr / 1fr 4fr 1fr;
 }
 
 #hero .section-content {
-  
-  /* border: 1px solid blue; */
+  border: 1px solid blue;
+  grid-area: 2 / 2 / span 1 / span 1;
 }
 
 #hero .section-content > p {
@@ -227,19 +243,4 @@ section#hero {
 .project .project-link:hover::after,
 .project .project-link:active::after {
   padding-left: 0.5rem;
-}
-
-#theme-switch {
-  width: 40px;
-  text-align: center;
-  font-size: 30px;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: 300ms ease-out;
-  background-color: transparent;
-}
-
-#theme-switch:hover {
-  cursor: cursor;
-  background-color: var(--accent-primary);
 }
