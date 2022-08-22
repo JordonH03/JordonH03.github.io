@@ -71,12 +71,12 @@ h2 {
   border-style: solid;
 }
 
-h2.light {
+.body-container.light h2 {
   border-color: var(--light-accent);
   box-shadow: -7px 7px var(--light-accent);
 }
 
-h2.dark {
+.body-container.dark h2 {
   border-color: var(--dark-accent);
   box-shadow: -7px 7px var(--dark-accent);
 }
@@ -90,34 +90,38 @@ p {
 }
 
 a {
-  color: var(--color-primary);
   text-decoration: none;
   transition: color 200ms ease-out;
 }
 
-a.light {
-  color: var(--light-primary);
+a:hover,
+a:active {
+  text-decoration: underline;
 }
 
-a.dark {
+.body-container.light a {
   color: var(--dark-primary);
 }
 
-a.light:visited {
-  color: var(--light-secondary);
+.body-container.dark a {
+  color: var(--light-primary);
 }
 
-a.light:visited {
+.body-container.light a:visited {
   color: var(--dark-secondary);
 }
 
-a.light:hover,
-a.light:active {
+.body-container.dark a:visited {
+  color: var(--light-secondary);
+}
+
+.body-container.light a:hover,
+.body-container.light a:active {
   color: var(--light-accent);
 }
 
-a.dark:hover,
-a.dark:active {
+.body-container.dark a:hover,
+.body-container.dark a:active {
   color: var(--dark-accent);
 }
 
@@ -226,6 +230,14 @@ section#hero {
   max-width: 100%;
   min-width: 200px;
   grid-area: 2 / 2 / span 1 / span 1;
+}
+
+.body-container.light #profile-picture {
+  box-shadow: -10px 10px var(--light-accent);
+}
+
+.body-container.dark #profile-picture {
+  box-shadow: -10px 10px var(--dark-accent);
 }
 
 #profile .section-content .text-container {
