@@ -14,7 +14,7 @@ import {
 export default function Navbar(): React.ReactElement {
     return (
         <NavigationMenu className="flex-auto max-w-full justify-end md:justify-between w-full">
-            <NavigationMenuList className="flex-row flex-auto flex-nowrap gap-x-4 hidden md:block text-primary w-fit">
+            <NavigationMenuList className="gap-x-4 hidden md:flex text-primary">
                 <NavigationMenuItem>
                     <NavigationMenuLink
                         className="text-black text-2xl hover:text-accent hover:decoration-underline hover:cursor-pointer"
