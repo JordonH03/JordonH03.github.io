@@ -2,26 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: var(--font-inter);
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 218 100% 89%;
+    --primary: 241 77% 7%;
+    --secondary: 217 93% 19%;
+    --card: 222 100% 74%;
+    --accent: 270 64% 31%;
+    --muted: 0 0% 93%;
+    --gradient: linear-gradient(90deg,var(var(--muted))), var(var(--card));
+    --button: 20px;
+  }
+  .dark {
+    --background: 44 79% 5%;
+    --primary: 83 40% 89%;
+    --secondary: 82 19% 79%;
+    --card: 33 45% 31%;
+    --accent: 50 82% 71%;
+    --muted: 0 0% 93%;
+    --gradient: linear-gradient(90deg,var(var(--muted))), var(var(--card));
+    --button: 20px;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-background text-primary;
   }
 }
