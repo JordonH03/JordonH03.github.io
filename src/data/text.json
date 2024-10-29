@@ -1,0 +1,12 @@
+{
+    "hero": {
+        "intro": "This is",
+        "title": "Jordon Hong.",
+        "subtitle": "Software developer"
+    },
+    "about": {
+        "title": "About",
+        "description": "I am a software developer with a passion for creating and learning. I have experience with full-stack web development, mobile development, and game development. I am always looking for new opportunities to learn and grow as a developer.",
+        "image": "/assets/profile-photo.png"
+    }
+}
