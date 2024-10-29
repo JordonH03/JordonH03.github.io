@@ -9,7 +9,7 @@ import {
     NavigationMenuItem,
     NavigationMenuLink,
     NavigationMenuList,
-} from "../ui/navigation-menu"
+} from "./ui/navigation-menu"
 
 export default function Navbar(): React.ReactElement {
     return (
