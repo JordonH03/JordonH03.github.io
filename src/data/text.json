@@ -8,5 +8,30 @@
         "title": "About",
         "description": "I am a software developer with a passion for creating and learning. I have experience with full-stack web development, mobile development, and game development. I am always looking for new opportunities to learn and grow as a developer.",
         "image": "/assets/profile-photo.png"
+    },
+    "projects": {
+        "title": "Projects",
+        "projects": [
+            {
+                "name": "Project 1",
+                "description": "This is a project description.",
+                "demo": "https://www.google.com",
+                "github": "https://www.github.com",
+                "tools": ["Tool 1", "Tool 2"]
+            }
+        ]
+    },
+    "experience": {
+        "title": "Experience",
+        "experiences": [
+            {
+                "position": "Software Developer",
+                "company": "Company 1",
+                "startDate": "2020",
+                "endDate": "2021",
+                "description": "This is a job description.",
+                "tools": ["Tool 1", "Tool 2"]
+            }
+        ]
     }
 }
