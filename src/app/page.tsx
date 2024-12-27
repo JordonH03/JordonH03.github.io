@@ -1,26 +1,24 @@
 import React from "react"
 import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
-import { Container, Grid } from "@radix-ui/themes"
-import Hero from "@/components/Hero"
-import About from "@/components/About"
+import Hero from "@/components/pages/Hero"
+import About from "@/components/pages/About"
+import Projects from "@/components/pages/projects/Projects"
+import Experience from "@/components/pages/experience/Experience"
 
 export default function Home() {
     return (
-        <Grid
-            align="center"
-            className="h-screen p-8"
-            columns="1"
-            justify="center"
-            px="96px"
-            rows="auto 1fr auto"
+        <div
+            className="grid grid-rows-[auto_1fr_auto] h-screen py-6 px-8 grid-cols-1 justify-center items-start gap-8"
         >
             <Navbar />
-            <Container px="96px">
+            <main className="grid gap-8">
                 <Hero />
                 <About />
-            </Container>
+                <Experience />
+                <Projects />
+            </main>
             <Footer />
-        </Grid>
+        </div>
     )
 }
