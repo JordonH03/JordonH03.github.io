@@ -2,35 +2,67 @@
     "hero": {
         "intro": "This is",
         "title": "Jordon Hong.",
-        "subtitle": "Software developer"
+        "subtitle": "A passionate developer interested in all things web."
     },
     "about": {
         "title": "About",
-        "description": "I am a software developer with a passion for creating and learning. I have experience with full-stack web development, mobile development, and game development. I am always looking for new opportunities to learn and grow as a developer.",
+        "description": [
+            "Hello! I'm Jordon, a 4th-year student and software developer. I'm currently studying computer science at the University of Manitoba and expecting my second co-op internship with RBC for Spring 2025.",
+            "Previously, I've worked in a variety of places — a university research lab, an online travel agency, and one of the largest banks in the world. I strive to be a T-developer, understanding a breadth of fields and knowledge while honing in-depth my main interest in the realm of web development.",
+            "I love bringing people together to talk tech and connect with peers. I'm a two-time organizer with the Canadian University Software Engineering Conference (CUSEC), first as Promotions Director in 2023, then taking the mantle of Co-Chair for CUSEC 2024. I'm now an advisor for CUSEC and current President of the U of M .devClub.",
+            "When I'm not coding, you can find me preparing to debut as the 6th member of Le Sserafim, listening to podcasts, or burning the midnight oil reading everything from manga to novels."
+        ],
         "image": "/assets/profile-photo.png"
-    },
-    "projects": {
-        "title": "Projects",
-        "projects": [
-            {
-                "name": "Project 1",
-                "description": "This is a project description.",
-                "demo": "https://www.google.com",
-                "github": "https://www.github.com",
-                "tools": ["Tool 1", "Tool 2"]
-            }
-        ]
     },
     "experience": {
         "title": "Experience",
         "experiences": [
             {
-                "position": "Software Developer",
-                "company": "Company 1",
-                "startDate": "2020",
-                "endDate": "2021",
-                "description": "This is a job description.",
-                "tools": ["Tool 1", "Tool 2"]
+                "position": "Developer Co-op",
+                "company": "RBC",
+                "start": "Sep",
+                "end": "Dec 2024",
+                "description": [
+                    "Collaborated with product owners, designers, and quality engineers to fix accessibility defects in the Avion Linked Loyalty flagship app",
+                    "Taught senior developers the configuration process for Dynamic Application Security Test (DAST) scans in our CI/CD pipeline to detect vulnerabilities and uphold RBC's security guidelines",
+                    "Developed a plugin and catalog page with React and Spotify Backstage to introduce new catalog taxonomy for our internal developer portal"
+                ],
+                "tools": ["Java", "Angular", "TypeScript", "React", "Backstage"]
+            },
+            {
+                "position":"Software Developer Co-op",
+                "company":"Priceline Partner Solutions",
+                "start": "Jan",
+                "end": "Apr 2024",
+                "description": [
+                    "Developed a web application using Typescript and Contentful, enabling marketers and product managers to enhance and customize promotions for hundreds of hotel properties",
+                    "Implemented upgrades to our design system search components, improving mobile usability and maintaining a consistent visual identity across platforms",
+                    "Built a REST API endpoints for in TypeScript and SQL, allowing easy retrieval of partner data in our internal console tool"
+                ],
+                "tools": ["React", "TypeScript", "Jest", "Storybook", "Contentful CMS"]
+            },
+            {
+                "position": "Undergraduate Research Student",
+                "company": "University of Manitoba",
+                "start": "May",
+                "end": "Aug 2023",
+                "description": [
+                    "Designed a canonical labelling system to compare isomorphic directed subgraphs during mining",
+                    "Designed a DFS algorithm in Java capable of identifying minimum directed k-paths"
+                ],
+                "tools": ["Java"]
+            }
+        ]
+    },
+    "projects": {
+        "title": "Projects",
+        "projects": [
+            {
+                "name": "My personal website",
+                "description": "A Next app to showcase my projects and experiences. Hosted on Github pages.",
+                "demo": "https://www.google.com",
+                "github": "https://github.com/JordonH03/JordonH03.github.io",
+                "tools": ["Next.js", "React", "TypeScript", "TailwindCSS", "RadixUI", "Figma"]
             }
         ]
     }

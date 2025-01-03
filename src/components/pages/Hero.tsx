@@ -6,6 +6,7 @@ export default function Hero() {
             <div>
                 <p className="text-secondary text-lg md:text-xl">{text.hero.intro}</p>
                 <h1 className="text-accent text-4xl md:text-5xl">{text.hero.title}</h1>
+                <p className="text-secondary text-lg md:text-xl">{text.hero.subtitle}</p>
             </div>
         </section>
     )
