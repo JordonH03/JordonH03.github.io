@@ -1,11 +1,12 @@
 import text from "@/data/text.json"
 import ExperienceCard from "./ExperienceCard"
+import Header from "@/components/ui/Header"
 
 export default function Experience() {
     return (
         <section id="experience">
-            <h3 className="text-xl lg:5xl text-secondary">{text.experience.title}</h3>
-            <div>
+            <Header title={text.experience.title} />
+            <div className="grid grid-cols-1 gap-y-6">
                 {
                     text.experience.experiences.map((experience, index) => (
                         <ExperienceCard key={index} {...experience} />

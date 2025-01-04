@@ -18,7 +18,7 @@ export default function Navbar(): React.ReactElement {
                 <NavigationMenuItem>
                     <NavigationMenuLink
                         className="text-black text-2xl hover:text-accent hover:decoration-underline hover:cursor-pointer"
-                        href="#home"
+                        href="#"
                     >
                         JH
                     </NavigationMenuLink>
@@ -53,8 +53,9 @@ export default function Navbar(): React.ReactElement {
                     <NavigationMenuLink
                         className="hover:text-accent"
                         href="https://github.com/JordonH03"
+                        target="_blank"
                     >
-                        <GitHubLogoIcon className="h-button w-button" />
+                        <GitHubLogoIcon aria-label="Github, opens in a new tab" height={24} width={24}/>
                     </NavigationMenuLink>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
@@ -62,15 +63,16 @@ export default function Navbar(): React.ReactElement {
                         className="hover:text-accent"
                         href="mailto:jordonhong03@gmail.com"
                     >
-                        <EnvelopeClosedIcon className="h-button w-button" />
+                        <EnvelopeClosedIcon aria-label="Email, opens in a new window" height={24} width={24}/>
                     </NavigationMenuLink>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                     <NavigationMenuLink
                         className="hover:text-accent"
                         href="https://www.linkedin.com/in/jordonhong/"
+                        target="_blank"
                     >
-                        <LinkedInLogoIcon className="h-button w-button" />
+                        <LinkedInLogoIcon aria-label="LinkedIn, opens in a new tab" height={24} width={24}/>
                     </NavigationMenuLink>
                 </NavigationMenuItem>
             </NavigationMenuList>

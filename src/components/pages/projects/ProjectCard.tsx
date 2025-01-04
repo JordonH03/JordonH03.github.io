@@ -1,5 +1,4 @@
 import { Badge } from "@/components/ui/badge"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { GitHubLogoIcon, GlobeIcon } from "@radix-ui/react-icons"
 
 interface IProjectProps {
@@ -18,24 +17,28 @@ export default function ProjectCard({
     tools,
 }: IProjectProps) {
     return (
-        <Card>
-            <CardHeader className="flex flex-row flex-nowrap justify-between items-baseline">
-                <CardTitle>{name}</CardTitle>
+        <aside>
+            <div className="grid grid-rows-1 grid-cols-[auto,auto] items-center justify-between mb-2">
+                <h3 className="text-lg font-medium">{name}</h3>
                 <span className="flex gap-2">
-                    <a href={demo}><GlobeIcon/></a>
-                    <a href={github}><GitHubLogoIcon/></a>
+                    {
+                        demo && <a aria-label="View live project, opens in a new tab" href={demo} target="_blank" rel="noreferrer"><GlobeIcon height={16} width={16}/></a>
+                    }
+                    {
+                        github && <a aria-label="View Github repository, opens in a new tab" href={github} target="_blank" rel="noreferrer"><GitHubLogoIcon height={16} width={16}/></a>
+                    }
                 </span>
-            </CardHeader>
-            <CardContent>
-                <CardDescription>{description}</CardDescription>
-            </CardContent>
-            <CardFooter className="flex flex-wrap gap-2">
+            </div>
+            <div className="mb-5">
+                <p>{description}</p>
+            </div>
+            <div className="flex flex-wrap gap-2">
                 {
                     tools.map((tool, index) => (
                         <Badge key={index}>{tool}</Badge>
                     ))
                 }
-            </CardFooter>
-        </Card>
+            </div>
+        </aside>
     )
 }

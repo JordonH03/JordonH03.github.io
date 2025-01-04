@@ -20,6 +20,7 @@
             {
                 "position": "Developer Co-op",
                 "company": "RBC",
+                "link": "https://www.rbc.com/canada.html",
                 "start": "Sep",
                 "end": "Dec 2024",
                 "description": [
@@ -32,6 +33,7 @@
             {
                 "position":"Software Developer Co-op",
                 "company":"Priceline Partner Solutions",
+                "link": "https://www.priceline.com/",
                 "start": "Jan",
                 "end": "Apr 2024",
                 "description": [
@@ -44,6 +46,7 @@
             {
                 "position": "Undergraduate Research Student",
                 "company": "University of Manitoba",
+                "link": null,
                 "start": "May",
                 "end": "Aug 2023",
                 "description": [

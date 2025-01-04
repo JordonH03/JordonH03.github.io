@@ -20,8 +20,11 @@ export default function RootLayout({
 }: Readonly<{
     children: React.ReactNode
 }>) {
+
+    const cn = `scroll-smooth ${inter.variable}`
+
     return (
-        <html className={inter.variable} lang="en">
+        <html className={cn} lang="en">
             <body>{children}</body>
         </html>
     )

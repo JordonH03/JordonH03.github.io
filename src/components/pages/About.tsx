@@ -1,10 +1,11 @@
 import text from "@/data/text.json"
+import Header from "../ui/Header"
 
 export default function About() {
     return (
         <section id="about" className="grid grid-cols-1 md:grid-cols-[6fr_2fr] gap-x-12">
             <div>
-                <h3 className="text-xl lg:5xl text-secondary">{text.about.title}</h3>
+                <Header title={text.about.title} />
                 {
                     text.about.description.map((paragraph: string, index: number) => (
                         <p key={index} className="mb-4">{paragraph}</p>
