@@ -23,13 +23,13 @@ export default function ExperienceCard({
     const srLabel = `${company}, opens in a new tab`
 
     return (
-        <aside className="rounded-lg md:border">
+        <aside className="rounded-lg">
             <div className="mb-3">
-                <div>
-                    <p className="text-sm font-light mb-1">
+                <div className="grid grid-cols-1 md:grid-cols-[auto,auto] md:grid-rows-1 md:justify-between">
+                    <span className="text-sm font-light mb-1 col-start-1 md:col-start-2">
                         {start} - {end}
-                    </p>
-                    <h3 className="text-lg font-medium hover:text-blue-500">
+                    </span>
+                    <h3 className="text-lg font-medium hover:text-blue-500 col-start-1 md:row-start-1">
                         {
                             link ? (
                                 <span>
@@ -49,7 +49,6 @@ export default function ExperienceCard({
                             )
                         }
                     </h3>
-
                 </div>
                 <p className="text-base">{position}</p>
             </div>

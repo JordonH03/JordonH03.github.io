@@ -45,7 +45,7 @@
             },
             {
                 "position": "Undergraduate Research Student",
-                "company": "University of Manitoba",
+                "company": "University of Manitoba Database and Data Mining Lab",
                 "link": null,
                 "start": "May",
                 "end": "Aug 2023",
@@ -62,7 +62,7 @@
         "projects": [
             {
                 "name": "My personal website",
-                "description": "A Next app to showcase my projects and experiences. Hosted on Github pages.",
+                "description": "A Next app to showcase my projects and experiences. Hosted on Vercel.",
                 "demo": "https://www.google.com",
                 "github": "https://github.com/JordonH03/JordonH03.github.io",
                 "tools": ["Next.js", "React", "TypeScript", "TailwindCSS", "RadixUI", "Figma"]

@@ -3,7 +3,7 @@ import Header from "../ui/Header"
 
 export default function About() {
     return (
-        <section id="about" className="grid grid-cols-1 md:grid-cols-[6fr_2fr] gap-x-12">
+        <section id="about" className="grid grid-cols-1 gap-y-4">
             <div>
                 <Header title={text.about.title} />
                 {
@@ -12,9 +12,7 @@ export default function About() {
                     ))
                 }
             </div>
-            <div className="hidden md:block">
-                <img src={text.about.image} alt="profile photo" />
-            </div>
+            <img className="hidden rounded-lg max-w-xs lg:max-w-lg mx-auto md:block" src={text.about.image} alt="profile photo" />
         </section>
     )
 }
