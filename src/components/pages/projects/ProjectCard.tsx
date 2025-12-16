@@ -17,7 +17,7 @@ export default function ProjectCard({
     tools,
 }: IProjectProps) {
     return (
-        <aside>
+        <aside className="rounded-lg lg:px-6 lg:py-4 lg:bg-slate-500/40 lg:shadow-lg max-w-4xl">
             <div className="grid grid-rows-1 grid-cols-[auto,auto] items-center justify-between mb-2">
                 <h3 className="text-lg font-medium">{name}</h3>
                 <span className="flex gap-2">

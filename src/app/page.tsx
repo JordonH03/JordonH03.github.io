@@ -12,7 +12,7 @@ export default function Home() {
             className="grid grid-rows-[auto_1fr_auto] h-screen py-6 px-8 grid-cols-1 justify-center items-start gap-y-8"
         >
             <Navbar />
-            <main className="grid gap-y-12">
+            <main className="grid gap-y-12 max-w-7xl">
                 <Hero />
                 <About />
                 <Experience />
