@@ -2,7 +2,7 @@
     "plugins": ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
     "overrides": [
         {
-            "files": "*.{astro,js,jsx,ts,tsx,json,css,md,mjs}",
+            "files": "*.{astro,js,jsx,ts,tsx,json,md,mjs}",
             "options": {
                 "endOfLine": "lf",
                 "jsxSingleQuote": true,
@@ -15,6 +15,14 @@
             "files": "*.astro",
             "options": {
                 "parser": "astro"
+            }
+        },
+        {
+            "files": "*.css",
+            "options": {
+                "parser": "css",
+                "tabWidth": 4,
+                "singleQuote": true
             }
         }
     ]

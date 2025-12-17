@@ -1,38 +1,35 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-body {
-    font-family: var(--font-inter);
+@font-face {
+    font-family: Figtree;
+    src: url("/fonts/Figtree-VariableFont_wght.ttf") format("truetype"),
+        url("/fonts/Figtree-Italic-VariableFont_wght.ttf") format("truetype");
+    font-display: swap;
 }
 
-@layer utilities {
-    .text-balance {
-        text-wrap: balance;
-    }
+@font-face {
+    font-family: Fraunces;
+    src: url("/fonts/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf") format("truetype"),
+        url("/fonts/Fraunces-Italic-VariableFont_SOFT,WONK,opsz,wght.ttf") format("truetype");
+    font-display: swap;
+    font-variation-settings: 'WONK' 1, 'SOFT' 0, 'opsz' 1;
+}
+
+@theme {
+    --font-sans: Figtree, sans-serif;
+    --font-serif: Fraunces, serif;
 }
 
 @layer base {
-    :root {
-        --background: 0 0% 100%;
-        --foreground: 222.2 47.4% 11.2%;
-        --muted: 210 40% 96.1%;
-        --muted-foreground: 215.4 16.3% 46.9%;
-        --card: 0 0% 100%;
-        --card-foreground: 222.2 47.4% 11.2%;
-        --popover: 0 0% 100%;
-        --popover-foreground: 222.2 47.4% 11.2%;
-        --border: 214.3 31.8% 91.4%;
-        --input: 214.3 31.8% 91.4%;
-        --primary: 222.2 47.4% 11.2%;
-        --primary-foreground: 210 40% 98%;
-        --secondary: 210 40% 96.1%;
-        --secondary-foreground: 222.2 47.4% 11.2%;
-        --accent: 210 40% 96.1%;
-        --accent-foreground: 222.2 47.4% 11.2%;
-        --destructive: 0 100% 50%;
-        --destructive-foreground: 210 40% 98%;
-        --ring: 215 20.2% 65.1%;
-        --radius: 0.5rem;
+    h1 {
+        font-size: var(--text-5xl);
+    }
+
+    h1, h2 {
+        font-family: var(--font-serif);
+    }
+
+    body, p, a, li, span, div {
+        font-family: var(--font-sans);
     }
 }
