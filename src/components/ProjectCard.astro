@@ -1,0 +1,52 @@
+---
+import { GitHubLogoIcon, GlobeIcon } from '@radix-ui/react-icons'
+import Badge from './Badge.astro'
+
+const { demo, description, github, name, tools } = Astro.props as IProjectProps
+
+interface IProjectProps {
+    demo: string
+    description: string
+    github: string
+    name: string
+    tools: string[]
+}
+---
+
+<div class="border-2 rounded-lg p-4 md:p-6 lg:p-8 max-w-[600px]">
+    <div class="flex flex-row justify-between items-center">
+        <h3>{name}</h3>
+        <span class="flex flex-row gap-x-4 items-center">
+            {
+                demo && (
+                    <a
+                        aria-label='View live project, opens in a new tab'
+                        href={demo}
+                        target='_blank'
+                        rel='noreferrer'
+                    >
+                        <GlobeIcon height={16} width={16} />
+                    </a>
+                )
+            }
+            {
+                github && (
+                    <a
+                        aria-label='View Github repository, opens in a new tab'
+                        href={github}
+                        target='_blank'
+                        rel='noreferrer'
+                    >
+                        <GitHubLogoIcon height={16} width={16} />
+                    </a>
+                )
+            }
+        </span>
+    </div>
+    <div>
+        <p>{description}</p>
+    </div>
+    <div>
+        {tools.map((tool) => <Badge content={tool} />)}
+    </div>
+</div>

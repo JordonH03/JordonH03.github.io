@@ -1,0 +1,56 @@
+---
+import { ExternalLinkIcon } from '@radix-ui/react-icons'
+import Badge from './Badge.astro'
+
+interface IExperienceProps {
+    company: string
+    description: string[]
+    end: string
+    link: string | null
+    position: string
+    start: string
+    tools: string[]
+}
+
+const { company, description, end, link, position, start, tools } =
+    Astro.props as IExperienceProps
+
+const srLabel = `Learn more about ${company}. Opens in a new tab.`
+---
+
+<div class="border-2 rounded-lg p-4 md:p-6 lg:p-8 max-w-[600px]">
+    <div class="mb-4">
+        <div class="flex flex-row justify-between items-center mb-2">
+            {
+                link ? (
+                    <h3 class="flex flex-row items-center gap-x-0.5">
+                        <a
+                            aria-label={srLabel}
+                            href={link}
+                            rel='noopener noreferrer'
+                            target='_blank'
+                        >
+                            {company}
+                        </a>
+                        <ExternalLinkIcon
+                            height={16}
+                            width={16}
+                        />
+                    </h3>
+                ) : (
+                    <h3>{company}</h3>
+                )
+            }
+            <span>
+                {start} - {end}
+            </span>
+        </div>
+        <p>{position}</p>
+    </div>
+    <ul class="mb-4 list-disc list-inside">
+        {description.map((point) => <li>{point}</li>)}
+    </ul>
+    <div class="flex flex-row flex-wrap gap-2">
+        {tools.map((tool) => <Badge content={tool} />)}
+    </div>
+</div>

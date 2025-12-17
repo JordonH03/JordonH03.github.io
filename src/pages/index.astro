@@ -1,0 +1,63 @@
+---
+import ExperienceCard from '../components/ExperienceCard.astro'
+import Footer from '../components/Footer.astro'
+import Layout from '../layouts/Layout.astro'
+import Navbar from '../components/Navbar.astro'
+import ProjectCard from '../components/ProjectCard.astro'
+import text from '../data/data.json'
+---
+
+<Layout>
+    <Navbar />
+    <main>
+        <section>
+            <div>
+                <h1>Jordon Hong</h1>
+            </div>
+        </section>
+        <section id='about'>
+            <div>
+                <h2>About</h2>
+                <p>
+                    Hello! I'm Jordon, a 4th-year student and software developer. I'm
+                    currently studying computer science at the University of Manitoba and
+                    expecting my second co-op internship with RBC for Spring 2025.
+                    Previously, I've worked in a variety of places— a university research
+                    lab, an online travel agency, and one of the largest banks in the
+                    world. I strive to be a T-developer, understanding a breadth of fields
+                    and knowledge while honing in-depth my main interest in the realm of
+                    web development. I love bringing people together to talk tech and
+                    connect with peers. I'm a two-time organizer with the Canadian
+                    University Software Engineering Conference (CUSEC), first as
+                    Promotions Director in 2023, then taking the mantle of Co-Chair for
+                    CUSEC 2024. I'm now an advisor for CUSEC and current President of the
+                    U of M .devClub. When I'm not coding, you can find me preparing to
+                    debut as the 6th member of Le Sserafim, listening to podcasts, or
+                    burning the midnight oil reading everything from manga to novels.
+                </p>
+            </div>
+            <!-- <img src='/assets/profile-photo.png' alt='profile photo' /> -->
+        </section>
+        <section id='experience'>
+            <h2>Experience</h2>
+            <div>
+                {
+                    text.experience.map((experience, index) => (
+                        <ExperienceCard key={index} {...experience} />
+                    ))
+                }
+            </div>
+        </section>
+        <section id='projects'>
+            <h2>Projects</h2>
+            <div>
+                {
+                    text.projects.map((project, index) => (
+                        <ProjectCard key={index} {...project} />
+                    ))
+                }
+            </div>
+        </section>
+    </main>
+    <Footer />
+</Layout>
