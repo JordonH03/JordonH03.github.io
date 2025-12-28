@@ -4,6 +4,17 @@
             "position": "Developer Co-op",
             "company": "RBC",
             "link": "https://www.rbc.com/canada.html",
+            "start": "May",
+            "end": "Aug 2025",
+            "description": [
+                ""
+            ],
+            "tools": ["Java", "Spring Boot"]
+        },
+        {
+            "position": "Developer Co-op",
+            "company": "RBC",
+            "link": "https://www.rbc.com/canada.html",
             "start": "Sep",
             "end": "Dec 2024",
             "description": [
@@ -47,8 +58,8 @@
     ],
     "projects": [
         {
-            "name": "My personal website",
-            "description": "A Next app to showcase my projects and experiences. Hosted on Vercel.",
+            "name": "JordonH03.github.io",
+            "description": "My personal website built to showcase my projects and experience. You're on it right now!",
             "demo": "https://www.google.com",
             "github": "https://github.com/JordonH03/JordonH03.github.io",
             "tools": [
@@ -65,9 +76,9 @@
             "description": "A virtual veterinary app that helps pet owners manage their pets' health information and communicate with veterinarians.",
             "github": "https://github.com/4350-fall-2025",
             "tools": [
-                "NextJS",
                 "Spring Boot",
                 "Java",
+                "NextJS",
                 "React",
                 "Sass"
             ]
