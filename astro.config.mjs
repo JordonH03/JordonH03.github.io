@@ -6,7 +6,7 @@ import tailwindcss from '@tailwindcss/vite';
 // https://astro.build/config
 export default defineConfig({
   integrations: [react()],
-  site: 'https://www.JordonH03.github.io',
+  site: 'https://JordonH03.github.io',
   output: 'static',
   outDir: './dist',
   build: {
