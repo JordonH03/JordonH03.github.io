@@ -1,5 +1,9 @@
 ---
-const { content } = Astro.props as { content: string }; 
+const { content } = Astro.props as { content: string }
 ---
 
-<span class="border-2 rounded-full px-3 py-1">{content}</span>
+<span
+    class='badge flex justify-center items-center bg-light-overcast dark:bg-dark-overcast text-light-header dark:text-dark-header rounded-full px-3 py-1'
+>
+    {content}
+</span>

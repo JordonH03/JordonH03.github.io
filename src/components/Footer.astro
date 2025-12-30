@@ -1,4 +1,36 @@
-<footer>
-    <p>Built and designed by Jordon Hong.</p>
-    <p>&copy; 2025 Jordon Hong. All rights reserved.</p>
+---
+import { EnvelopeClosedIcon, GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
+---
+
+<footer class="flex flex-col items-center justify-center gap-y-2 py-4 font-sans font-light text-xs text-light-header dark:text-dark-header">
+    <div class="flex gap-x-2">
+        <a
+            aria-label="Email, opens in a new window"
+            href="mailto:jordonhong03@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <EnvelopeClosedIcon />
+        </a>
+        <a
+            aria-label="LinkedIn, opens in a new tab"
+            href="https://www.linkedin.com/in/jordonhong"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <LinkedInLogoIcon />
+        </a>
+        <a
+            aria-label="GitHub, opens in a new tab"
+            href="https://github.com/JordonH03"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <GitHubLogoIcon />
+        </a>
+    </div>
+    <div class="text-center">
+        <p>Built and designed by Jordon Hong.</p>
+        <p>&copy; 2025 Jordon Hong. All rights reserved.</p>
+    </div>
 </footer>
