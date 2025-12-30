@@ -13,10 +13,10 @@ interface IProjectProps {
 }
 ---
 
-<div class="border-2 rounded-lg p-4 md:p-6 lg:p-8 max-w-[600px]">
-    <div class="flex flex-row justify-between items-center">
-        <h3>{name}</h3>
-        <span class="flex flex-row gap-x-4 items-center">
+<div class="grid grid-cols-1 grid-rows-[repeat(3, auto)] gap-y-4 p-4 border border-glow rounded-xl bg-light-page/30 backdrop-blur-xl">
+    <div class="row-start-1 flex flex-row gap-x-4 justify-start items-center">
+        <h3 class="text-base font-normal text-light-header dark:text-dark-header">{name}</h3>
+        <span class="flex flex-row gap-x-2 justify-start items-center">
             {
                 demo && (
                     <a
@@ -43,10 +43,10 @@ interface IProjectProps {
             }
         </span>
     </div>
-    <div>
+    <div class="row-start-2 font-sans text-sm">
         <p>{description}</p>
     </div>
-    <div>
+    <div class="row-start-3 flex flex-row flex-wrap gap-x-2 gap-y-1">
         {tools.map((tool) => <Badge content={tool} />)}
     </div>
 </div>
