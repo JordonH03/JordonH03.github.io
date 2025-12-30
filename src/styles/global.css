@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+html, body {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
 @font-face {
     font-family: Figtree;
     src: url("/fonts/Figtree-VariableFont_wght.ttf") format("truetype"),
@@ -12,24 +18,44 @@
     src: url("/fonts/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf") format("truetype"),
         url("/fonts/Fraunces-Italic-VariableFont_SOFT,WONK,opsz,wght.ttf") format("truetype");
     font-display: swap;
-    font-variation-settings: 'WONK' 1, 'SOFT' 0, 'opsz' 1;
+    font-variation-settings: "SOFT" 0, "WONK" "on";
 }
 
 @theme {
-    --font-sans: Figtree, sans-serif;
-    --font-serif: Fraunces, serif;
+    --breakpoint-md: 800px;
+    --breakpoint-lg: 1200px;
+    --font-sans: Figtree, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-serif: "Fraunces", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    --color-light-glow: oklch(0.8929 0.0458 63.97);
+    --color-light-header: oklch(0.1826 0.0319 131.22);
+    --color-light-body: oklch(0.4273 0.0366 219.95);
+    --color-light-page: oklch(0.9445 0.012 209.8);
+    --color-light-overcast: oklch(0.7204 0.0564 223.63 / 24%);
+    --color-light-shine: oklch(0.7204 0.0564 223.63 / 36%);
+    --color-dark-glow: oklch(0.4123 0.0899 247.71);
+    --color-dark-shine: oklch(0.6825 0.0621 180.88 / 36%);
+    --color-dark-overcast: oklch(0.6825 0.0621 180.88 / 24%);
+    --color-dark-page: oklch(0.2106 0.0233 176.08);
+    --color-dark-body: oklch(0.7399 0.024 182.93);
+    --color-dark-header: oklch(0.94 0.0399 97.78);
 }
 
+
 @layer base {
-    h1 {
-        font-size: var(--text-5xl);
-    }
-
-    h1, h2 {
-        font-family: var(--font-serif);
-    }
-
-    body, p, a, li, span, div {
+    body {
         font-family: var(--font-sans);
+        color: var(--color-light-body);
+        background-color: var(--color-light-page);
+
+        @variant dark {
+            color: var(--color-dark-body);
+            background-color: var(--color-dark-page);
+        }
     }
+}
+
+.badge {
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 600;
 }
