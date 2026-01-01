@@ -10,7 +10,7 @@ import '../styles/global.css'
         <meta name='generator' content={Astro.generator} />
         <title>Jordon Hong</title>
     </head>
-    <body class="grid grid-cols-1 grid-rows-[repeat(3, auto)] gap-y-20 justify-items-center items-start min-h-screen">
-        <slot />
+    <body class="grid grid-cols-1 auto-rows-auto gap-y-20 min-h-screen font-sans text-light-body dark:text-dark-body">
+        <slot class="z-10" />
     </body>
 </html>

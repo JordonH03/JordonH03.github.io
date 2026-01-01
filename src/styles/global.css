@@ -1,9 +1,10 @@
 @import "tailwindcss";
 
-html, body {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
+html,
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 @font-face {
@@ -40,17 +41,13 @@ html, body {
     --color-dark-header: oklch(0.94 0.0399 97.78);
 }
 
-
 @layer base {
-    body {
-        font-family: var(--font-sans);
-        color: var(--color-light-body);
-        background-color: var(--color-light-page);
+    html {
+        backdrop-filter: blur(80px);
+    }
 
-        @variant dark {
-            color: var(--color-dark-body);
-            background-color: var(--color-dark-page);
-        }
+    #hero {
+        background: radial-gradient(400% 75% at 50% 100%, oklch(0.7697 0.0411 92.8) 0%, oklch(0.8365 0.0368 71.36) 5%, oklch(0.6645 0.0602 184.58) 24%, oklch(0.4481 0.0443 234.82) 36%, oklch(0.3166 0.0337 253.95) 50%, oklch(0.2932 0.0359 183.8) 72%, oklch(0.2106 0.0233 176.08) 100%);
     }
 }
 
