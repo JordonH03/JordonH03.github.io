@@ -1,0 +1,43 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Figtree;
+    src: url("/fonts/Figtree-VariableFont_wght.ttf") format("truetype"),
+        url("/fonts/Figtree-Italic-VariableFont_wght.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Fraunces;
+    src: url("/fonts/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf") format("truetype"),
+        url("/fonts/Fraunces-Italic-VariableFont_SOFT,WONK,opsz,wght.ttf") format("truetype");
+    font-display: swap;
+    font-variation-settings: "SOFT" 0, "WONK" "on";
+}
+
+:root {
+    color-scheme: light;
+    --breakpoint-md: 800px;
+    --breakpoint-lg: 1200px;
+    --sans-serif: Figtree, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --serif: "Fraunces", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    --background: white;
+    --text: black;
+    --subtext: oklch(0.4318 0 0);
+    
+    @media screen and (prefers-color-scheme: dark) {
+        --background: oklch(0.1500 0 0);
+        --text: white;
+    }
+}
+
+
+body {
+    margin: 0;
+    font-family: var(--sans-serif);
+}
