@@ -1,0 +1,31 @@
+---
+import { randomInt } from "crypto"
+
+import { CARDS } from '../data/cards'
+import '../styles/hero.scss'
+import CardViewer from "./CardViewer"
+
+let deck = []
+
+let pull = ['', '']
+
+if (randomInt(CARDS.length) === CARDS.length-1) {
+}
+
+// pull = cards[randomInt(cards.length - 1)]
+---
+
+<section id='landing'>
+    <div class="card-info">
+        <span class="card-intro-text">You found</span>
+        <div class="card-text">
+            <h1 class="card-name">Jordon Hong</h1>
+            <span class="card-variant">{pull[0]}</span>
+        </div>
+    </div>
+    
+    <div class="canvas-container">
+        <span class:list={['rarity-badge', pull[1] === 'SECRET' ? 'secret' : 'super-rare']}>{pull[1]}</span>
+        <CardViewer client:only="react" />
+    </div>
+</section>

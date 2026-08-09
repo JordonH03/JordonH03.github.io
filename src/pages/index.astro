@@ -5,65 +5,13 @@ import Layout from '../layouts/Layout.astro'
 import Header from '../components/Header.astro'
 import Project from '../components/Project.astro'
 import text from '../data/data.json'
+import Hero from '../components/Hero.astro'
 ---
 
 <Layout>
     <!-- <Header class:list={['row-start-1']} client:load /> -->
     <main>
         <Hero/>
-        <!-- <div class="max-w-255 px-10 justify-self-center-safe">
-            <section id='about' class='flex flex-col gap-4'>
-                <h2
-                    class='text-light-header dark:text-dark-header font-serif text-3xl font-light italic'>
-                    About
-                </h2>
-                <p>
-                    Hello! I'm Jordon (with an o). I'm a software developer and
-                    soon-to-be-graduated student studying computer science at the University
-                    of Manitoba. Previously, I've worked in a variety of places— a university research lab,
-                    an online travel agency, and one of the largest banks in the world.
-                </p>
-                <p>
-                    I love bringing people together to talk tech and connect with peers. I'm a
-                    two-time organizer with the Canadian University Software Engineering
-                    Conference (CUSEC), first as Promotions Director in 2023, then taking the
-                    mantle of Co-Chair for CUSEC 2024. I'm now an advisor for CUSEC and
-                    current President of the U of M .devClub.
-                </p>
-                <p>
-                    When I'm not coding, you can find me preparing to debut as the 6th member
-                    of Le Sserafim or burning the midnight oil reading
-                    everything from manga to novels.
-                </p>
-            </section>
-            <section id='experience' class='flex flex-col gap-4'>
-                <h2
-                    class='text-light-header dark:text-dark-header font-serif text-3xl font-light italic'>
-                    Experience
-                </h2>
-                <div
-                    class='border-light-shine dark:border-dark-shin flex flex-col gap-6 border-l pl-4'>
-                    {
-                        text.experience.map((experience, index) => (
-                            <Experience key={index} {...experience} />
-                        ))
-                    }
-                </div>
-            </section>
-            <section id='projects' class='flex flex-col gap-4'>
-                <h2
-                    class='text-light-header dark:text-dark-header font-serif text-3xl font-light italic'>
-                    Projects
-                </h2>
-                <div class='grid w-full grid-flow-row grid-cols-1 gap-6 md:grid-cols-2'>
-                    {
-                        text.projects.map((project, index) => (
-                            <Project key={index} {...project} />
-                        ))
-                    }
-                </div>
-            </section>
-        </div> -->
     </main>
     <!-- <Footer class:list={['row-start-2']} /> -->
 </Layout>
