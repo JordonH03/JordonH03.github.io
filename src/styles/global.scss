@@ -1,35 +1,61 @@
 @font-face {
     font-family: Figtree;
-    src: url("/fonts/Figtree-VariableFont_wght.ttf") format("truetype"),
-        url("/fonts/Figtree-Italic-VariableFont_wght.ttf") format("truetype");
+    src: url("/fonts/figtree/Figtree-VariableFont_wght.ttf") format("truetype"),
+        url("/fonts/figtree/Figtree-Italic-VariableFont_wght.ttf") format("truetype");
     font-display: swap;
 }
 
 @font-face {
     font-family: Fraunces;
-    src: url("/fonts/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf") format("truetype"),
-        url("/fonts/Fraunces-Italic-VariableFont_SOFT,WONK,opsz,wght.ttf") format("truetype");
+    src: url("/fonts/fraunces/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf") format("truetype"),
+        url("/fonts/fraunces/Fraunces-Italic-VariableFont_SOFT,WONK,opsz,wght.ttf") format("truetype");
     font-display: swap;
     font-variation-settings: "SOFT" 0, "WONK" "on";
+}
+
+@font-face {
+    font-family: Barlow;
+    src: 
+        url("/fonts/barlow/Barlow-Regular.ttf") format("truetype");
+    font-display: swap;
+    font-weight: normal;
+}
+    
+@font-face {
+    font-family: Barlow;
+    src:
+        url("/fonts/barlow/Barlow-SemiBold.ttf") format("truetype");
+    font-display: swap;
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: Barlow;
+    src:
+        url("/fonts/barlow/Barlow-Bold.ttf") format("truetype");
+    font-display: swap;
+    font-weight: 700;
+    font-style: normal;
 }
 
 :root {
     color-scheme: light;
 
-    --sans-serif: Figtree, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --sans-serif: "Figtree", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --serif: "Fraunces", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 
     --background: white;
     --text: black;
     --subtext: oklch(0.4318 0 0);
+    --accent: oklch(0.543922 0.220796 25.5325);
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    @media (prefers-color-scheme: dark) {
-        --background: oklch(0.1500 0 0);
-        --text: white;
-    }
+    // @media (prefers-color-scheme: dark) {
+    //     --background: oklch(0.1500 0 0);
+    //     --text: white;
+    // }
 
     @media (prefers-reduced-motion: no-preference) {
         scroll-behavior: smooth;
