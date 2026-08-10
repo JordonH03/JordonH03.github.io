@@ -15,12 +15,12 @@
 
 @font-face {
     font-family: Barlow;
-    src: 
+    src:
         url("/fonts/barlow/Barlow-Regular.ttf") format("truetype");
     font-display: swap;
     font-weight: normal;
 }
-    
+
 @font-face {
     font-family: Barlow;
     src:
@@ -29,6 +29,7 @@
     font-weight: 600;
     font-style: normal;
 }
+
 @font-face {
     font-family: Barlow;
     src:
@@ -41,7 +42,7 @@
 :root {
     color-scheme: light;
 
-    --sans-serif: "Figtree", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --sans-serif: "Barlow", "Figtree", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --serif: "Fraunces", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 
     --background: white;
@@ -88,4 +89,31 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+section {
+    max-width: 800px;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+
+    .section-header {
+        font-size: clamp(1.5rem, 3vw, 1.875rem);
+    }
+}
+
+.link {
+    color: var(--accent);
+    font-weight: bold;
+    letter-spacing: 0.5px;
+
+    background-image: linear-gradient(var(--accent), var(--accent));
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-position: 0% 100%;
+    transition: background-size 0.2s linear;
+
+
+    &:hover {
+        color: var(--background);
+        background-size: 100% 100%;
+    }
 }

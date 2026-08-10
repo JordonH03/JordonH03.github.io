@@ -1,0 +1,37 @@
+.experience-container {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    row-gap: 0.5rem;
+}
+
+.experience-item-header {
+    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+
+    a {
+        color: var(--accent);
+
+        svg {
+            display: inline-block;
+        }
+    }
+}
+
+.experience-date {
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    text-transform: uppercase;
+}
+
+.experience-description {
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+
+    p, ul {
+        margin: 0;
+    }
+
+    li {
+        margin-bottom: 0.5rem;
+    }
+}
