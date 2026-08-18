@@ -1,5 +1,5 @@
 ---
-import Experiences from '../components/Experiences.astro'
+import Experiences from '../components/Experiences'
 import Footer from '../components/Footer.astro'
 import Layout from '../layouts/Layout.astro'
 import Header from '../components/Header.astro'
@@ -14,7 +14,7 @@ import About from '../components/About.astro'
     <main>
         <Hero/>
         <About/>
-        <Experiences/>
+        <Experiences client:load/>
     </main>
     <!-- <Footer class:list={['row-start-2']} /> -->
 </Layout>
